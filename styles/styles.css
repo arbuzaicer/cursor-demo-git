@@ -1,7 +1,11 @@
+body {
+  background-color: gray;
+}
+
 .button {
   border: none;
   width: 100px;
   height: 30px;
   border-radius: 10px;
-  background-color: aqua;
+  background-color: rgb(255, 0, 230);
 }
