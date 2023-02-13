@@ -1,0 +1,281 @@
+// variables
+$main-color: #1c233d;
+$secondary-color: #30384d;
+$btn-bg-one: #c367e6;
+$btn-bg-two: #bfc4ee;
+$active: #3d2a3d;
+$text-color: #e5e5e5;
+
+// sizes
+$header-height: 65px;
+$horizontal-padding: 60px;
+$actions-height: 30px;
+
+// fonts
+
+// breakpoints
+$xs: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+* {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+h5 {
+  color: $text-color;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  background-color: $main-color;
+}
+
+#main {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.btn {
+  border: none;
+  height: 40px;
+  padding: 0 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: $text-color;
+
+  &:active,
+  &:focus {
+    background-color: $active;
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, $btn-bg-one, $btn-bg-two);
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+}
+
+.btn-tertiary {
+  border: 1px solid white;
+}
+
+.header {
+  top: 0;
+  z-index: 10;
+  display: flex;
+  position: sticky;
+  align-items: center;
+  transition: all 0.4s;
+  height: $header-height;
+  background-color: $main-color;
+  justify-content: space-between;
+  padding: 0 $horizontal-padding;
+
+  &-title {
+    font-size: 25px;
+    font-weight: 900;
+  }
+
+  &-nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &-list-item {
+    list-style: none;
+    margin-right: 30px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &-input {
+    width: 240px;
+    padding: 0 8px;
+    border-radius: 5px;
+    position: relative;
+    height: $actions-height;
+    border: 1px solid $text-color;
+
+    input {
+      border: none;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      background-color: transparent;
+    }
+
+    svg {
+      top: 8px;
+      right: 8px;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+
+      path {
+        fill: $text-color;
+      }
+    }
+  }
+
+  &-btn {
+    min-width: 90px;
+    height: $actions-height;
+  }
+
+  &-active {
+    box-shadow: 1px 1px 18px 0px $text-color;
+  }
+
+  //   media
+  @media screen and (max-width: $lg) {
+    padding: 0 30px;
+  }
+}
+
+.greetings {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 124px;
+  padding: 0 $horizontal-padding;
+  justify-content: space-between;
+
+  &-content {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+
+    button {
+      max-width: 200px;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 900;
+    }
+
+    p {
+      margin: 12px 0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+
+  &-card {
+    width: 400px !important;
+    height: 490px !important;
+    border-radius: 10px;
+    padding: 30px 25px 18px 25px;
+  }
+
+  &-statistics {
+    margin-top: auto;
+  }
+}
+
+.statistics {
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  justify-content: space-between;
+
+  h3 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.card {
+  width: 280px;
+  height: 325px;
+  background-color: $secondary-color;
+
+  &-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+
+    img {
+      width: 100%;
+      transform: scale(1.1);
+    }
+  }
+
+  &-above {
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+  }
+
+  &-title {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &-icons {
+    position: relative;
+
+    img {
+      width: 30px;
+      height: 30px;
+
+      z-index: 1;
+      position: absolute;
+
+      &:nth-child(1) {
+        right: 80px;
+      }
+
+      &:nth-child(2) {
+        right: 60px;
+      }
+
+      &:nth-child(3) {
+        right: 40px;
+      }
+
+      &:nth-child(4) {
+        right: 20px;
+      }
+
+      &:last-child {
+        z-index: 999;
+        position: relative;
+      }
+    }
+  }
+
+  &-below {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      &:first-child {
+        font-size: 8px;
+        font-weight: 400;
+        color: #545c71;
+      }
+
+      &:last-child {
+        margin-top: 5px;
+        font-size: 10px;
+      }
+    }
+  }
+}
